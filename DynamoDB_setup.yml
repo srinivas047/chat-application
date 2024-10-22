@@ -1,0 +1,11 @@
+Resources:
+  ChatTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: "ChatMessages"
+      AttributeDefinitions:
+        - AttributeName: "ConnectionId"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "ConnectionId"
+          KeyType: "HASH"
